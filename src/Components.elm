@@ -109,18 +109,18 @@ section title content =
 
 postListing : Time.Zone -> Content -> Element msg
 postListing timezone { meta } =
-    column [ spacing 12 ]
+    textColumn [ spacing 12, width fill ]
         [ link
             [ Font.semiBold
             , Font.size 20
             , Font.underline
             , Font.color (rgb255 225 115 65)
             ]
-            { url = "/posts/" ++ meta.slug, label = text meta.title }
-        , el
+            { url = "/posts/" ++ meta.slug, label = paragraph [] [ text meta.title ] }
+        , paragraph
             [ Font.size 14
             , Font.color (rgb255 100 100 100)
             ]
-            (text <| formatDate timezone meta.date)
-        , text meta.description
+            [ text <| formatDate timezone meta.date ]
+        , paragraph [] [ text meta.description ]
         ]

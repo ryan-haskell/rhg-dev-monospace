@@ -6,11 +6,16 @@ body {
 
 .markdown p, .markdown blockquote, .markdown div,
 .markdown ol, .markdown ul, .markdown li,
-.markdown h3, .markdown h4,
+.markdown h2, .markdown h3, .markdown h4,
 .markdown h5, .markdown h6 {
   white-space: normal;
   line-height: 1.4;
   margin: 0;
+}
+
+.markdown h2 {
+  margin-top: 1rem;
+  line-height: 1.25;
 }
 .markdown pre {
   line-height: 1.4;

@@ -28,13 +28,13 @@ view timezone { meta, markdown } =
             , spacing 32
             ]
             [ column [ width fill, spacing 16 ]
-                [ column [ width fill, spacing 12 ]
-                    [ el
+                [ textColumn [ width fill, spacing 12 ]
+                    [ paragraph
                         [ Font.size 32
                         , Font.semiBold
                         ]
-                        (text meta.title)
-                    , el [] (text (Components.formatDate timezone meta.date))
+                        [ text meta.title ]
+                    , paragraph [] [ text (Components.formatDate timezone meta.date) ]
                     ]
                 , viewTags meta.tags
                 ]

@@ -12,10 +12,10 @@ view : Time.Zone -> { title : String, body : Element msg }
 view timezone =
     { title = "rhg.dev"
     , body =
-        column [ spacing 48, paddingXY 0 16 ]
+        column [ spacing 48, paddingXY 0 16, width fill ]
             [ column [ spacing 16, paddingXY 0 32 ]
                 [ el [ Font.size 32, Font.semiBold ] (text "rhg.dev")
-                , text "i have absolutely no idea what I'm doing."
+                , paragraph [] [ text "i have absolutely no idea what I'm doing." ]
                 ]
             , Components.section "Latest posts"
                 (Posts.posts
