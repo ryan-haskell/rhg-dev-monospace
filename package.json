@@ -1,0 +1,24 @@
+{
+  "name": "rhg-dev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && serve dist",
+    "dev": "chokidar 'src/Pages' 'src/Components.elm' 'src/main.css' 'generator' 'posts' -c 'npm run build' & serve dist",
+    "build": "npm run generate && npm run elm && cp src/main.css dist/main.css",
+    "elm": "elm make --optimize --output=dist/app.elm.js src/Main.elm",
+    "generate": "node generator/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "elm": "0.19.0-no-deps",
+    "front-matter": "3.0.2"
+  },
+  "devDependencies": {
+    "chokidar-cli": "2.0.0",
+    "serve": "11.1.0"
+  }
+}

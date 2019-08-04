@@ -1,0 +1,49 @@
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css);
+
+body {
+  margin: 0;
+}
+
+.markdown p, .markdown blockquote, .markdown div,
+.markdown ol, .markdown ul, .markdown li,
+.markdown h3, .markdown h4,
+.markdown h5, .markdown h6 {
+  white-space: normal;
+  line-height: 1.4;
+  margin: 0;
+}
+.markdown pre {
+  line-height: 1.4;
+  padding: 20px 20px;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-sizing: border-box;
+  background: white !important;
+  white-space: pre-wrap;
+  font-size: 14px;
+}
+.markdown code {
+  font-family: 'Fira Code';
+}
+.markdown iframe {
+  width: 100%;
+  overflow: hidden;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  min-height: 400px;
+}
+.markdown img {
+  image-rendering: pixelated;
+  width: 100%;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15); 
+}
+
+.markdown a {
+  color: rgb(225,115,65);
+  font-weight: 600;
+}

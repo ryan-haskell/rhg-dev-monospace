@@ -1,0 +1,7 @@
+.DS_Store
+elm-stuff
+node_modules
+src/Content
+src/Main.elm
+src/Posts.elm
+dist
