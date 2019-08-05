@@ -8,6 +8,7 @@ module.exports = ({ meta }) =>
   <title>${meta.title}</title>
   <meta name="description" content="${meta.description}" />
   <meta property="og:title" content="${meta.title}" />
+  <meta property="og:url" content="${meta.url}" />
   <meta property="og:description" content="${meta.description}" />
   <meta property="og:image" content="${meta.image}" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.207/distr/fira_code.css">
