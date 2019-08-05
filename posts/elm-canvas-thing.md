@@ -93,4 +93,4 @@ As you can see, the 2nd and 3rd columns (index 1 and 2) are a bit longer. That's
 
 Play it in fullscreen over here: https://elm-canvas-demo.netlify.com
 
-Or checkout the source code in this repo: https://github.com/ryannhg/elm-canvas-thing
+Or checkout the source code in this repo: https://github.com/ryannhg/elm-canvas-things
