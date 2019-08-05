@@ -131,7 +131,7 @@ const convert = (folder, filename) => {
       slug: dropExtension(filename),
       meta: {
         ...data.attributes,
-        url: `${baseUrl}/posts/${dropExtension(filename)}`
+        url: `${BASE_URL}/posts/${dropExtension(filename)}`
       },
       markdown: data.body
     }))
