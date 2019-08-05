@@ -5,6 +5,8 @@ const postsElm = require('./templates/posts.elm.js')
 const indexHtml = require('./templates/index.html.js')
 const fs = require('fs')
 
+const BASE_URL = process.env.BASE_URL || 'https://rhg.dev'
+
 const map = (fn) => (list) => list.map(fn)
 
 // File helpers
@@ -127,7 +129,10 @@ const convert = (folder, filename) => {
     .then(data => ({
       module: pascalCase(dropExtension(filename)),
       slug: dropExtension(filename),
-      meta: data.attributes,
+      meta: {
+        ...data.attributes,
+        url: `${baseUrl}/posts/${dropExtension(filename)}`
+      },
       markdown: data.body
     }))
 }
@@ -159,6 +164,7 @@ const generateFiles = (folder) => (results) =>
           meta: {
             title: 'rhg.dev',
             description: 'the coolest website ever tho',
+            url: BASE_URL,
             image: 'https://avatars2.githubusercontent.com/u/6187256'
           }
         })
@@ -169,6 +175,7 @@ const generateFiles = (folder) => (results) =>
           meta: {
             title: 'posts | rhg.dev',
             description: 'the coolest website ever tho',
+            url: BASE_URL + '/posts',
             image: 'https://avatars2.githubusercontent.com/u/6187256'
           }
         })
@@ -183,7 +190,7 @@ const generateFiles = (folder) => (results) =>
       path: 'src/Main.elm',
       data: mainElm(results.map(({ data }) => data))
     }),
-    // src/Main.elm
+    // src/Posts.elm
     file.write({
       path: 'src/Posts.elm',
       data: postsElm(results.map(({ data }) => data))
