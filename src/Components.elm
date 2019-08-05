@@ -10,23 +10,20 @@ import Time
 
 
 formatDate : Time.Zone -> Time.Posix -> String
-formatDate zone posix =
-    "written on a "
-        ++ D.format
-            [ D.dayOfWeekNameFull
-            , D.text " ("
-            , D.monthNameFull
-            , D.text " "
-            , D.dayOfMonthSuffix
-            , D.text ", "
-            , D.yearNumber
-            , D.text " around "
-            , D.hourNumber
-            , D.amPmLowercase
-            , D.text ")"
-            ]
-            zone
-            posix
+formatDate =
+    D.format
+        [ D.monthNameFull
+        , D.text " "
+        , D.dayOfMonthSuffix
+        , D.text ", "
+        , D.yearNumber
+        , D.text " ("
+        , D.dayOfWeekNameFull
+        , D.text " around "
+        , D.hourNumber
+        , D.amPmLowercase
+        , D.text ")"
+        ]
 
 
 layout : Route -> Element msg -> Html msg

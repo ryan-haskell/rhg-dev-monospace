@@ -21,7 +21,7 @@ view timezone tag =
              ]
                 ++ (Posts.posts
                         |> List.filter (byTag tag)
-                        |> List.sortBy (.meta >> .date >> Time.posixToMillis)
+                        |> List.sortBy (.meta >> .date >> Time.posixToMillis >> negate)
                         |> List.map (Components.postListing timezone)
                    )
             )

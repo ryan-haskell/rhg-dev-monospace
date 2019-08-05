@@ -19,7 +19,8 @@ view timezone =
                 ]
             , Components.section "Latest posts"
                 (Posts.posts
-                    |> List.sortBy (.meta >> .date >> Time.posixToMillis)
+                    |> List.sortBy (.meta >> .date >> Time.posixToMillis >> negate)
+                    |> List.take 5
                     |> List.map (Components.postListing timezone)
                 )
             ]
