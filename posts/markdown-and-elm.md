@@ -94,4 +94,4 @@ There's also some additional stuff in there for generating out the `.html` files
 
 It's all available on my Github here: https://github.com/ryannhg/rhg-dev
 
-(What a wild way Saturday night)
+(What a wild way to spend a Saturday night)
