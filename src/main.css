@@ -27,6 +27,7 @@ body {
   background: white !important;
   white-space: pre-wrap;
   font-size: 14px;
+  margin-bottom: 2rem;
 }
 .markdown code {
   font-family: 'Fira Code';
@@ -51,4 +52,10 @@ body {
 .markdown a {
   color: rgb(225,115,65);
   font-weight: 600;
+}
+
+.markdown p > code {
+  background: #f4f4f4;
+  padding: 0.0675em 0.25em;
+  border: solid 1px #ddd;
 }
