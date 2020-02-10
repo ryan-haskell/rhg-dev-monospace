@@ -2,7 +2,7 @@
 title: "Code Generation with Elm"
 date: 1581351300142
 description: "Generating Elm code with Elm code (and some JS)"
-image: "https://raw.githubusercontent.com/ryannhg/elm-canvas-things/master/screenshot.png"
+image: "https://github.com/ryannhg/rhg-dev/blob/master/images/elm-code-generation.png?raw=true"
 tags: [ "elm", "generation", "elm-spa" ]
 ---
 
