@@ -85,7 +85,7 @@ meta =
 
 markdown : String
 markdown =
-    """${markdown}"""
+    ${JSON.stringify(markdown)}
 `
 
 // Validate the markdown frontmatter
