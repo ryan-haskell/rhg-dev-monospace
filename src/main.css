@@ -19,16 +19,42 @@ body {
 }
 .markdown pre {
   line-height: 1.4;
-  padding: 20px 20px;
+  padding: 0;
   border: solid 1px #ddd;
   border-radius: 4px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.15);
   box-sizing: border-box;
   background: white !important;
-  white-space: pre-wrap;
   font-size: 14px;
   margin-bottom: 2rem;
 }
+
+.markdown pre > code {
+    padding: 20px 20px;
+    display: block;
+    overflow: auto;
+}
+
+.markdown code.lang-bash {
+    background: #333;
+    color: white;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.markdown code.lang-bash::before {
+    content: '$';
+    position: absolute;
+    left: 1rem;
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.markdown code.lang-sh {
+    background: #333;
+    color: white;
+}
+
 .markdown code {
   font-family: 'Fira Code';
 }
