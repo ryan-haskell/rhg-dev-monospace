@@ -10,6 +10,7 @@ tags: [ "elm", "generation", "elm-spa" ]
 
 someone reached out to me recently about how i generated Elm code with Elm for [elm-spa](https://elm-spa.dev). At a high-level, this post is about the things you'll need to do to create your own library.
 
+
 #### designing for the elm community?
 
 __Code generation is neat, but having a well-designed package is a better outcome!__ Elm folks can easily understand functions and data types over your custom library.
@@ -568,3 +569,5 @@ That's it– We made Elm code with Elm code (and like 20 lines of JS)! For your 
 For example, elm-spa uses the names of items in the `src/Pages` folder to determine what code to generate.
 
 Thanks for reading, hope this post was useful!
+
+Feel free to check out [the project on Github](https://github.com/ryannhg/elm-codegen)!
