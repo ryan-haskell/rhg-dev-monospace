@@ -24,7 +24,7 @@ module.exports = ({ meta }) =>
   <script src="/app.elm.js"></script>
   <script>
     const app = Elm.Main.init({ node: document.getElementById('app') })
-    app.ports.outgoing.subscribe(_ => hljs.initHighlighting())
+    window.hljs.initHighlightingOnLoad()
   </script>
 </body>
 </html>`
