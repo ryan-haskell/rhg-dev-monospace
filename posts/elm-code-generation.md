@@ -20,7 +20,7 @@ __Code generation is neat, but having a well-designed package is a better outcom
 
 Let's create a new elm project from the command line:
 
-```
+```sh
 mkdir codegen
 cd codegen
 elm init
@@ -114,7 +114,7 @@ init _ =
 
 That's enough Elm for now, let's make sure your app compiles:
 
-```
+```bash
 elm make src/Main.elm --output=dist/elm.js --optimize
 ```
 
@@ -140,13 +140,13 @@ This is a simple program that does three things:
 
 Run the app like this:
 
-```
+```bash
 node index.js
 ```
 
 You should see this in the output:
 
-```
+```sh
 Hello from Elm!
 ```
 
@@ -190,7 +190,7 @@ I'm not much of a unit testing kinda guy, but holy boy I should have written tes
 
 ### setting up elm-test
 
-```
+```sh
 npm i -g elm-test
 elm-test init
 ```
@@ -240,14 +240,14 @@ init flags =
 
 Let's rebuild the app, and run it again!
 
-```
+```sh
 elm make src/Main.elm --output=dist/elm.js --optimize
 node index.js
 ```
 
 You should see this output:
 
-```
+```sh
 Dashboard, AboutUs, NotFound
 ```
 
@@ -300,14 +300,14 @@ init flags =
 
 Now when we recompile and run the app:
 
-```
+```sh
 elm make src/Main.elm --output=dist/elm.js --optimize
 node index.js
 ```
 
 We should see this printed out in the console:
 
-```
+```sh
 module Route exposing (routes)
 
 import Url.Parser as Parser exposing (Parser)
@@ -479,7 +479,7 @@ const app = Elm.Main.init({
 
 And run the latest code, we should see the console print out this:
 
-```
+```sh
 module Route exposing (routes)
 
 import Url.Parser as Parser exposing (Parser)
@@ -532,7 +532,7 @@ After importing `fs` and `path` at the top, and replace the `console.log` with s
 
 If we build and run our app one last time:
 
-```
+```sh
 elm make src/Main.elm --output=dist/elm.js --optimize
 node index.js
 ```
